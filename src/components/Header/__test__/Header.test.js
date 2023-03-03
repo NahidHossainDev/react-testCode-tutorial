@@ -15,11 +15,11 @@ test("getByRole-heading", async () => {
 	expect(headingElement).toBeInTheDocument();
 });
 
-test("getByRole-heading should have two element", async () => {
+test("getByRole-heading should have one element", async () => {
 	const title = "My Header";
 	render(<Header title={title} />);
 	const headingElements = screen.getAllByRole("heading");
-	expect(headingElements.length > 1).toBe(true);
+	expect(headingElements.length === 1).toBe(true);
 });
 
 it("getByTitle-heading should have title attribute", async () => {
